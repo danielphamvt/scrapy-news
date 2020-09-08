@@ -1,19 +1,26 @@
 # -*- coding: utf-8 -*-
 
-
 BOT_NAME = 'news'
 FEED_EXPORT_ENCODING = 'utf-8'
 SPIDER_MODULES = ['quotesbot.spiders']
 NEWSPIDER_MODULE = 'quotesbot.spiders'
 USER_AGENT = 'my-cool-project (http://example.com)'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'quotesbot (+http://www.yourdomain.com)'
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "stackoverflow"
+MONGODB_COLLECTION = "questions"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+ITEM_PIPELINES = {
+   'quotesbot.pipelines.MongoDBPipeline': 300,
+}
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
@@ -55,9 +62,6 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'quotesbot.pipelines.SomePipeline': 300,
-# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
