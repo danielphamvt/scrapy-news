@@ -1,4 +1,3 @@
--# scrapy-news
 # scrapy-news
 ## Các bước thực hiện:
 1. Tải sourcecode về máy
@@ -13,7 +12,7 @@ Bỏ qua bước 3 nếu chạy trên môi trường Anaconda.
 ```scrapy crawl vnexpress -o vn_express.json``` hoặc ```scrapy crawl thegioididong -o tgdd.json``` 
 
 6. Để lưu dữ liệu vào Mongodb, thực hiện các bước sau:
-
+- Bỏ comment đoạn code ```ITEM_PIPELINES```  file settings.py
 - Cài đặt MongoDB từ website: <link>https://www.mongodb.com/try/download/community</link>
 - Mở MongoDBcompass và tạo cơ sở dữ liệu có tên: ```news_bot``` và collection ```review```
-- Sử dụng các lệnh: ```scrapy crawl vnexpress``` hoặc ```scrapy crawl thegioididong``` để crawl và lưu dữ liệu vào CSDL MongoDB 
+- Sử dụng các lệnh: ```scrapy crawl vnexpress``` hoặc ```scrapy crawl thegioididong``` để crawl và lưu dữ liệu vào CSDL  
