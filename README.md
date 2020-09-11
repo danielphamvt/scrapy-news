@@ -14,5 +14,5 @@ Bỏ qua bước 3 nếu chạy trên môi trường Anaconda.
 6. Để lưu dữ liệu vào Mongodb, thực hiện các bước sau:
 - Bỏ comment đoạn code ```ITEM_PIPELINES```  file settings.py
 - Cài đặt MongoDB từ website: <link>https://www.mongodb.com/try/download/community</link>
-- Mở MongoDBcompass và tạo cơ sở dữ liệu có tên: ```news_bot``` và collection ```review```
-- Sử dụng các lệnh: ```scrapy crawl vnexpress``` hoặc ```scrapy crawl thegioididong``` để crawl và lưu dữ liệu vào CSDL  
+- Sử dụng các lệnh: ```scrapy crawl vnexpress``` hoặc ```scrapy crawl thegioididong``` để crawl và lưu dữ liệu vào CSDL MongoDB
+- Mở MongoDBcompass và xem dữ liệu đã được scrapy crawl có tên: ```news_bot``` và collection ```review```
