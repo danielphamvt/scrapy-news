@@ -6,10 +6,9 @@ class VnExpress(scrapy.Spider):
     name = 'vnexpress'
     start_urls = [
         'https://vnexpress.net/kinh-doanh',
-        'https://vnexpress.net/the-thao'
     ]
 
-    def parse(self, response, nb_page_limit=35):
+    def parse(self, response, nb_page_limit=10):
         root_path = "//div[@class='width_common list-news-subfolder has-border-right']/article | " \
                     "//div[@class='item-news item-news-common']/article"
         count = 0
@@ -27,4 +26,3 @@ class VnExpress(scrapy.Spider):
         pages = ['/kinh-doanh/p'+str(i) for i in range(2, nb_page_limit+1)]
         if next_page_url is not None and next_page_url in pages:
             yield scrapy.Request(response.urljoin(next_page_url))
-
