@@ -6,6 +6,7 @@
 3. Tạo môi trường ảo bằng cách vào File-->preference (hoặc tạo môi trường ảo bằng terminal https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/).  Activate môi trường ảo.
 
 Bỏ qua bước 3 nếu chạy trên môi trường Anaconda.
+
 4. Mở terminal (Nếu chạy trên môi trường ảo thì môi trường này đã active). Chạy lệnh sau để cài các pakages cần thiết cho project:
 
 ```pip install -r requirements.txt```
