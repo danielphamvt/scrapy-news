@@ -1,4 +1,3 @@
--# scrapy-news
 # scrapy-news
 ## Các bước thực hiện:
 1. Tải sourcecode về máy
