@@ -1,3 +1,7 @@
 
 .idea/workspace.xml
 .DS_Store
+news_bot/spiders/__pycache__/vnexpress.cpython-37.pyc
+*.pyc
+*.xml
+*.iml

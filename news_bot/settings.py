@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
 BOT_NAME = 'news'
-FEED_EXPORT_ENCODING = 'utf-8'
-SPIDER_MODULES = ['crawlnewsbot.spiders']
-NEWSPIDER_MODULE = 'crawlnewsbot.spiders'
-USER_AGENT = 'my-project (http://example.com)'
+SPIDER_MODULES = ['news_bot.spiders']
+NEWSPIDER_MODULE = 'news_bot.spiders'
+USER_AGENT = 'my-cool-project (http://example.com)'
+# Crawl responsibly by identifying yourself (and your website) on the user-agent
 
-# ITEM_PIPELINES = {
-#    'crawlnewsbot.pipelines.MongoDBPipeline': 300,
-# }
-
+# Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
-
+ITEM_PIPELINES = {
+   'news_bot.pipelines.MongoDBPipeline': 300,
+}
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 32
@@ -40,13 +39,13 @@ CONCURRENT_REQUESTS = 32
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'crawlnewsbot.middlewares.MyCustomSpiderMiddleware': 543,
+#    'news_bot.middlewares.MyCustomSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'crawlnewsbot.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'news_bot.middlewares.MyCustomDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions

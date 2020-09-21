@@ -21,4 +21,3 @@ class MongoDBPipeline(object):
         if valid:
             self.collection.insert(dict(item))
         return item
-
